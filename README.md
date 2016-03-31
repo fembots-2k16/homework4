@@ -21,11 +21,17 @@ http://wiki.ros.org/slam_gmapping/Tutorials/MappingFromLoggedData
 ------------------------------------------------
 
 1. Need to ssh into your pi, with 4 tabs (at least!)
+2. 
     a. turn on the pi with the dongle connected (should auto connect)
+
     b. connect laptop to UA-DSL
+
     c1. arp -a (and look for an ip address of the pi)
+
             OR
+
     c2. (just plug in pi to a monitor to find it's ipaddress on wlan1)
+
     d. ssh ubuntu@10.0.1.22     (or whatever ip address)
     
     e. on the four tabs that you open, run the following (while connected to pi)
