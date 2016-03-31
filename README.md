@@ -17,7 +17,7 @@ http://wiki.ros.org/slam_gmapping/Tutorials/MappingFromLoggedData
 
 # INSTRUCTIONS
 -------------------------------------------------
-------------------INSTRUCTIONS------------------
+//------------------INSTRUCTIONS------------------
 ------------------------------------------------
 
 1. Need to ssh into your pi, with 4 tabs (at least!)
@@ -39,7 +39,7 @@ $ roscore
 
 $ roslaunch p2os_launch pioneer.launch
 
-# NOTE: ignoring the error message about map_server seemed to be ok
+// NOTE: ignoring the error message about map_server seemed to be ok
 
 --------------------------------------------------
 ---------TAB 3 (raspi)------------------------------------
@@ -52,9 +52,9 @@ $ rosbag record -O mylaserdata /scan /tf
 $ rostopic pub /cmd_motor_state p2os_msgs/MotorState 1
 $ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
-# can now move the robot around with your keyboard
-# remember to always press k after issuing any command to make it stop and
-#   only move forward or turn a little bit at a time
+// can now move the robot around with your keyboard
+// remember to always press k after issuing any command to make it stop and
+//   only move forward or turn a little bit at a time
 
 --------------------------------------------------
 =====================================================
@@ -88,14 +88,14 @@ $ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
        ------------TAB 2 (raspi)-----------------
        
        $ rosparam set use_sim_time true
-       $ rosrun gmapping slam_gmapping scan:=scan       #YES scan:=scan, NOT scan:=base_scan
+       $ rosrun gmapping slam_gmapping scan:=scan       //YES scan:=scan, NOT scan:=base_scan
        
        ------------------------------------------
        ------------TAB 3 (raspi)-----------------
        
        $ rosbag play --clock mylaserdata.bag
        
-       # let the command above finish all the way through, and then...
+       // let the command above finish all the way through, and then...
        
        $ rosrun map_server map_saver -f mymap.pgm
        
