@@ -111,3 +111,8 @@ $ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
    ====================================================
    
 4. ??? well now we have a map. need to figure out how to use it with navigation stack (??) and rest of assignment
+
+    * can publish map data to the /map channel 
+        $ rosrun map_server map_server mymap.yaml
+        
+        //publishes as this: http://docs.ros.org/api/nav_msgs/html/msg/OccupancyGrid.html
