@@ -94,7 +94,8 @@ $ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
        ------------TAB 2 (raspi)-----------------
        
        $ rosparam set use_sim_time true
-       $ rosrun gmapping slam_gmapping scan:=scan       //YES scan:=scan, NOT scan:=base_scan
+       
+       $ rosrun gmapping slam_gmapping scan:=scan
        
        ------------------------------------------
        ------------TAB 3 (raspi)-----------------
@@ -103,7 +104,7 @@ $ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
        
        // let the command above finish all the way through, and then...
        
-       $ rosrun map_server map_saver -f mymap.pgm
+       $ rosrun map_server map_saver -f mymap
        
        ------------------------------------------
        
