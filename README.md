@@ -58,5 +58,7 @@ $ rosrun map_server map_server mymap.yaml
 
 --------------------------------------------------
 ---------TAB 4 (raspi)------------------------------------
+
 $ cd ~/catkin_ws
+
 $ rosrun homework3 pioneerController.py
