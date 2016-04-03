@@ -13,9 +13,7 @@ http://wiki.ros.org/slam_gmapping/Tutorials/MappingFromLoggedData
 1. need to learn how to use 'navigation stack' to localize robot in our map based on its starting position?
   -(can we just set the starting position in rviz? probably)
 2. need to make the AI controller that will:
-  a. move to the goal position from the start position
-  b. do so while avoiding obstacles in the map (and using the map)
-  c. do so WHILE AVOIDING NEW, LOCAL OBSTACLES
+  c. do so WHILE AVOIDING NEW, LOCAL OBSTACLES (???) (or at least pausing)
 
 ---------------------------------------------------------------------
 =====================================================================
