@@ -10,16 +10,35 @@ http://wiki.ros.org/slam_gmapping/Tutorials/MappingFromLoggedData
 -------------------------------------------------
 # TODO::
 
-1. need to learn how to use 'navigation stack' to localize robot in our map based on its starting position?
-  -(can we just set the starting position in rviz? probably)
-2. need to make the AI controller that will:
-  c. do so WHILE AVOIDING NEW, LOCAL OBSTACLES (???) (or at least pausing)
+1. ??? who even knows
+
+2. sometimes the navigation stack works, sometimes it doesn't
+
+    a. running the exact same commands as documented below.. mind you
+    
+3. the navigator.py successfully sets a goal pose
+
+    a. as displayed on the rviz (when the navigation stack decides to work)
+    
+    b. but it doesn't seem to really want to go there
+    
+    c. again, this might be because the navigation stack was tired cuz it was so late
+    
+4. honestly who knows :-)
+
 
 ---------------------------------------------------------------------
 =====================================================================
 ========================RUNNING THE NAVIGATION/CONTROLLER============
 =========================INSTRUCTIONS================================
 
+0. add the following lines to your ~/.bashrc
+    
+    export ROS_MASTER_URI=http://10.0.1.22:11311
+    
+    export ROS_IP=10.0.1.20         //or you're ip address
+    
+    
 1. Need to ssh into your pi, with 4 tabs (at least!)
 2.
     a. turn on the pi with the dongle connected (should auto connect)
@@ -40,23 +59,30 @@ http://wiki.ros.org/slam_gmapping/Tutorials/MappingFromLoggedData
 
 $ roscore
 
---------------------------------------------------
+----------------------------------------------------------
 ---------TAB 2 (raspi)------------------------------------
+
+$ cs ~/homework4
 
 $ roslaunch p2os_launch pioneer.launch
 
-// why map server error?? do we need this?
-
---------------------------------------------------
+----------------------------------------------------------
 ---------TAB 3 (raspi)------------------------------------
 
-$ rosrun map_server map_server mymap.yaml
+$ cd ~/homework4/
 
-//note, we can probably modify the launch file to do this for us automatically, and this might be what she wants since we're turning in the launch file too
+$ rosparam set use_sim_time true
 
---------------------------------------------------
----------TAB 4 (raspi)------------------------------------
+$ roslaunch p2os_launch navigation.launch
+
+----------------------------------------------------------
+--------------TAB 3.5 (LAPTOP BASE STATION)--------------
+
+$ rosrun rviz rviz
+
+----------------------------------------------------------
+---------TAB 4 (LAPTOP BASE STATION)------------------------------------
 
 $ cd ~/catkin_ws
 
-$ rosrun homework3 pioneerController.py
+$ rosrun homework3 navigator.py
