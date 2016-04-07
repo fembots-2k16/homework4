@@ -17,12 +17,8 @@ $ map_server map_server map.yaml
 ----------------------------------------
 ---------------TAB 4--------------------
 
-$ rosrun rviz rviz
-
-----------------------------------------
-----------------TAB 5-------------------
-
-$ cd ~/catkin_ws
-$ rosrun homework3 pioneerController.py
+$ cd ~/homework4
+$ chmod +x pioneerController_simulation_outdated.py
+$ ./pioneerController_simulation_outdated.py
 
 ---------------------------------------

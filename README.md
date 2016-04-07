@@ -15,15 +15,15 @@ http://wiki.ros.org/slam_gmapping/Tutorials/MappingFromLoggedData
 2. sometimes the navigation stack works, sometimes it doesn't
 
     a. running the exact same commands as documented below.. mind you
-    
+
 3. the navigator.py successfully sets a goal pose
 
     a. as displayed on the rviz (when the navigation stack decides to work)
-    
+
     b. but it doesn't seem to really want to go there
-    
+
     c. again, this might be because the navigation stack was tired cuz it was so late
-    
+
 4. honestly who knows :-)
 
 
@@ -33,12 +33,12 @@ http://wiki.ros.org/slam_gmapping/Tutorials/MappingFromLoggedData
 =========================INSTRUCTIONS================================
 
 0. add the following lines to your ~/.bashrc
-    
+
     export ROS_MASTER_URI=http://10.0.1.22:11311
-    
+
     export ROS_IP=10.0.1.20         //or you're ip address
-    
-    
+
+
 1. Need to ssh into your pi, with 4 tabs (at least!)
 2.
     a. turn on the pi with the dongle connected (should auto connect)
@@ -62,7 +62,7 @@ $ roscore
 ----------------------------------------------------------
 ---------TAB 2 (raspi)------------------------------------
 
-$ cs ~/homework4
+$ cd ~/homework4
 
 $ roslaunch p2os_launch pioneer.launch
 
