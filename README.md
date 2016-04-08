@@ -51,14 +51,14 @@ $ roscore
 
 $ cd ~/homework4
 
-$ roslaunch p2os_launch pioneer.launch
+$ roslaunch pioneer.launch
 
 ----------------------------------------------------------
 ---------TAB 3 (raspi)------------------------------------
 
 $ cd ~/homework4/
 
-$ roslaunch p2os_launch navigation.launch
+$ roslaunch navigation.launch
 
 ----------------------------------------------------------
 --------------TAB 3.5 (LAPTOP BASE STATION)--------------

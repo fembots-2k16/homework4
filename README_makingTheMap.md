@@ -26,7 +26,7 @@ $ roscore
 --------------------------------------------------
 ---------TAB 2 (raspi)------------------------------------
 
-$ roslaunch p2os_launch pioneer.launch
+$ roslaunch pioneer.launch
 
 // NOTE: ignoring the error message about map_server seemed to be ok
 
