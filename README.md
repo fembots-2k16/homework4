@@ -10,21 +10,8 @@ http://wiki.ros.org/slam_gmapping/Tutorials/MappingFromLoggedData
 -------------------------------------------------
 # TODO::
 
-1. ??? who even knows
-
-2. sometimes the navigation stack works, sometimes it doesn't
-
-    a. running the exact same commands as documented below.. mind you
-
-3. the navigator.py successfully sets a goal pose
-
-    a. as displayed on the rviz (when the navigation stack decides to work)
-
-    b. but it doesn't seem to really want to go there
-
-    c. again, this might be because the navigation stack was tired cuz it was so late
-
-4. honestly who knows :-)
+1. make sure rviz & navigation stack configured well
+2. test setting goal pose (through rviz and by tweaking controller)
 
 
 ---------------------------------------------------------------------
@@ -71,8 +58,6 @@ $ roslaunch p2os_launch pioneer.launch
 
 $ cd ~/homework4/
 
-$ rosparam set use_sim_time true
-
 $ roslaunch p2os_launch navigation.launch
 
 ----------------------------------------------------------
@@ -83,6 +68,7 @@ $ rosrun rviz rviz
 ----------------------------------------------------------
 ---------TAB 4 (LAPTOP BASE STATION)------------------------------------
 
-$ cd ~/catkin_ws
+$ cd ~/homework4
 
-$ rosrun homework3 navigator.py
+$ ./navigator.py
+
