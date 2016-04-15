@@ -1,0 +1,9 @@
+<launch>
+<node pkg="amcl" type="amcl" name="amcl" output="screen">
+  <param name="odom_model_type" value="diff"/>
+  <param name="update_min_d" value="0.1"/>
+  <param name="update_min_a" value="0.3"/>
+  <param name="resample_interval" value="1"/>
+
+</node>
+</launch>
