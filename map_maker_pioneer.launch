@@ -1,0 +1,27 @@
+<launch>
+	<node pkg="p2os_driver" type="p2os_driver" name="p2os_driver">
+		<param name="port" type="string" value="/dev/ttyUSB0" />
+	</node>
+
+	<node pkg="hokuyo_node" type="hokuyo_node" name="hokuyo_node">
+		<!--
+		<param name="serial_port" value="/dev/ttyACM0" />
+		<param name="angle_min" type="double" value="-2.09" />
+		<param name="angle_max" type="double" value="2.09" />
+		-->
+	</node>
+	
+	<include file="$(find p2os_urdf)/launch/pioneer3dx_urdf.launch"/>
+
+	<node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="0 0 0.1397 0 0 0 base_link laser 100" />
+
+	<node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" args="/scan">
+		<param name="delta" type="double" value="0.05" />
+		<param name="temporalUpdate" type="double" value="2.5" />
+		<param name="xmin" type="double" value="-2" />
+		<param name="xmax" type="double" value="2" />
+		<param name="ymin" type="double" value="-2" />
+		<param name="ymax" type="double" value="2" />
+	</node>
+
+</launch>
