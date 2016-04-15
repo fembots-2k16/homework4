@@ -36,7 +36,7 @@ if __name__ == "__main__":
     client.wait_for_server()
 
     goal = MoveBaseGoal()
-    goal.target_pose.header.frame_id = "move_base"
+    goal.target_pose.header.frame_id = "map"
     goal.target_pose.header.stamp = rospy.get_rostime()
 
     goal.target_pose.pose.position.x = x
